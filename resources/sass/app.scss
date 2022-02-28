@@ -1,0 +1,42 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+#productsGameboy{
+    
+   h1{
+       color: red;
+       
+   }
+
+    
+    
+    
+}
+
+body{
+    background-image: radial-gradient(circle, white,green);
+}
+.card-img-top{
+    height: 200px;
+    object-fit: cover;
+}
+
+#productsSega{
+    h1{
+        color: blue;
+
+    }
+}
+#productsPlaystation{
+    h1{
+        color: powderblue;
+        background-color: purple;
+    }
+}
