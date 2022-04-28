@@ -134,6 +134,15 @@ class ProductsController extends Controller
 
         return view('products.playstation', compact('products', 'cart'));
     }
+
+    public function xbox()
+    {
+        $products = Product::where('category_id', 4)->get();
+        $cart = Cart::content();
+
+        return view('products.xbox', compact('products', 'cart'));
+    }
+
     public function figurines()
     {
         $products = Product::where('category_id', 6)->get();

@@ -27,6 +27,7 @@ Route::get('/', [ProductsController::class, 'welcome'])->name('welcome');
 Route::get('Nintendo', [ProductsController::class, 'nintendo']);
 Route::get('Sega', [ProductsController::class, 'sega']);
 Route::get('Playstation', [ProductsController::class, 'playstation']);
+Route::get('Xbox', [ProductsController::class, 'xbox']);
 Route::get('Figurines', [ProductsController::class, 'figurines']);
 Route::post('/', [CartController::class, 'store'])
     ->name('cart.store');
