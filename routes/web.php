@@ -22,13 +22,24 @@ use Illuminate\Support\Facades\Auth;
 /*Route::get('/', function () {
     return view('welcome');
 });*/
-
+/*
 Route::get('/', [ProductsController::class, 'welcome'])->name('welcome');
 Route::get('Nintendo', [ProductsController::class, 'nintendo']);
 Route::get('Sega', [ProductsController::class, 'sega']);
 Route::get('Playstation', [ProductsController::class, 'playstation']);
 Route::get('Xbox', [ProductsController::class, 'xbox']);
 Route::get('Figurines', [ProductsController::class, 'figurines']);
+Route::post('/', [CartController::class, 'store'])
+    ->name('cart.store');*/
+
+Route::controller(ProductsController::class)->group(function () {
+    Route::get('/', 'welcome')->name('welcome');
+    Route::get('Nintendo', 'nintendo');
+    Route::get('Sega', 'sega');
+    Route::get('Playstation', 'playstation');
+    Route::get('Xbox', 'xbox');
+    Route::get('Figurines', 'figurines');
+});
 Route::post('/', [CartController::class, 'store'])
     ->name('cart.store');
 
