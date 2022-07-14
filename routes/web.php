@@ -76,7 +76,8 @@ Route::get('cart', function () {
 });
 
 Route::get('/cart/update/{rowId}', [CartController::class, 'update'])->name('cart.update');
-Route::get('remove-from-cart', [CartController::class, 'remove']);
+Route::get('/cart/lessen/{rowId}', [CartController::class, 'lessen'])->name('cart.lessen');
+Route::get('remove-from-cart/{rowId}', [CartController::class, 'remove'])->name('cart.remove');
 Route::get('posts', [PostsController::class, 'index']);
 Route::get('posts/{post}', function (Post $post) {
     return view('posts.posts');

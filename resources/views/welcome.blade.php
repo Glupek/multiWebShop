@@ -36,7 +36,7 @@
                         @csrf
                         <input type="hidden" name="product_id" value="{{ $product->product_id }}">
                         <input type="number" value="1" name="quantity" class="text-sm sm:text-base px-2 pr-2 rounded-lg border border-gray-400 py-1 focus:outline-none focus:border-blue-400">
-                        <button type="submit" class="btn btn-warning"><i class="fas fa-shopping-cart"></i> Voeg toe aan mandje</button>
+                        <button type="submit" class="btn btn-warning"><i class="fa fa-shopping-cart"></i> Voeg toe aan mandje</button>
                         </form>
                         @endif
                      </div>

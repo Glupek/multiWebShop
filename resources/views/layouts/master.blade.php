@@ -6,8 +6,9 @@
         
         <title>{{ config('app.name', 'RetroDreams') }}</title>
         <script src="{{ asset('js/app.js') }}" defer></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-        <link href="{{ asset('css/font-awesome.css')}}" rel="stylesheet" type="text/css" /> 
+         
         
     </head>
     <body class="antialiased">
@@ -53,8 +54,8 @@
                   
                    <!-- Right Side Of Navbar -->
                    <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a href="{{ url('/cart') }}">
-                      <i class="fa fa-shopping-cart"></i>
+                    <li class="nav-item"><i class="fa fa-shopping-cart"></i><a href="{{ url('/cart') }}">
+                      
                        Cart ({{ \Gloudemans\Shoppingcart\Facades\Cart::content()->count() }})</a></li>
                     <!-- Authentication Links -->
                     @guest
@@ -100,6 +101,7 @@
            <footer id="footer">
             <div class="text-center">
                 <p>&copy; 2021 by moi</p>
+               
             </div>
         </footer>
         <script src="plugins/jquery/jquery.min.js"></script>

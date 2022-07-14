@@ -23,16 +23,32 @@ class CartController extends Controller
     }
     public function update(Request $request, $rowId)
     {
-        //        dd(Cart::content());
-        //        dd($request->all());
-        Cart::update($rowId, ['qty' => $request->qty]);
+
+        // dd(Cart::content());
+        // dd($request->all());
+
+        $row = Cart::get($rowId);
+
+        Cart::update($rowId, $row->qty + 1);
         return back();
     }
 
-    public function remove(Request $request)
+    public function remove(Request $request, $rowId)
     {
-        /* Cart::remove($cart->rowId);
+        Cart::remove($rowId);
         //dd(Cart::content());
-        return redirect()->route('welcome')->with('success', 'Product verwijderd');*/
+        return redirect()->route('welcome')->with('success', 'Product verwijderd');
+    }
+
+    public function lessen(Request $request, $rowId)
+    {
+
+        // dd(Cart::content());
+        // dd($request->all());
+
+        $row = Cart::get($rowId);
+
+        Cart::update($rowId, $row->qty - 1);
+        return back();
     }
 }

@@ -21,11 +21,17 @@
                      <td><input type="number" class="form-control text-center" value="{{  $cart->qty  }}"></td>
                      <td>{{ $cart->subtotal }} </td>
                     <td>
-                        <form action="{{ route('cart.update', $cart->rowId) }}">
+                        <form action="{{ route('cart.remove', $cart->rowId) }}">
                         
-                        <input type="submit" value="delete">
+                        <input type="submit" value="delete" class="btn btn-danger">
+                        
 
                         </form>
+                        <form action="{{ route('cart.update', $cart->rowId) }}">
+                            <input type="submit" value="+" class="btn btn-primary"> </form>
+                        <form action="{{ route('cart.lessen', $cart->rowId) }}">
+                                <input type="submit" value="-" class="btn btn-secondary"> </form>
+                                
                     </td>
                        
                  </tr>
